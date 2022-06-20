@@ -15,5 +15,5 @@ export interface Post {
     slug: {
         current: string
     },
-    body: [object]
+    body: [object],
 }

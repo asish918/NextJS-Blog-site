@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .formInput {
+        @apply shadow border rounded py-2 px-3 mt-1 block ring-yellow-500 ring-1 outline-none
+    }
+}
