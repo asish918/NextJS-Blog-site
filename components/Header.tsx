@@ -1,11 +1,12 @@
 import Link from "next/link"
+import assets from "../assets/assets"
 
 const Header = () => {
     return (
         <header className="flex justify-between p-5">
             <div className="flex items-center space-x-5">
                 <Link href="/">
-                    <img className="w-44 object-contain cursor-pointer" src="https://links.papareact.com/yvf" alt="logo" />
+                    <img className="w-44 object-contain cursor-pointer" src={assets.logo.src} alt="logo" />
                 </Link>
 
                 <div className="hidden md:inline-flex items-center space-x-5">

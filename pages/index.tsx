@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Header from '../components/Header'
 import { sanityClient, urlFor } from '../sanity'
 import { Post } from '../typings'
+import assets from '../assets/assets'
 
 interface Props {
   posts: Post[]
@@ -28,7 +29,7 @@ function Home({ posts }: Props) {
           </h2>
         </div>
 
-        <img className='hidden md:inline-flex h-32 lg:h-full' src="https://accountabilitylab.org/wp-content/uploads/2020/03/Medium-logo.png" alt="Medium-logo" />
+        <img className='hidden md:inline-flex h-32 lg:h-full' src={assets.banner.src} alt="Medium-logo" />
       </div>
 
       {/* Posts */}
@@ -41,10 +42,11 @@ function Home({ posts }: Props) {
               <div className='flex justify-between p-5 bg-white'>
                 <div>
                   <p className='text-lg font-bold'>{post.title}</p>
-                  <p className='text-xs'>{post.description} by <span className='font-semibold'>{post.author.name}</span></p>
+                  <p className='text-xs'>{post.description} </p> 
+                  <p className='text-xs mt-4'>by <span className='font-semibold'>{post.author.name}</span></p>
                 </div>
 
-                <img className='h-12 w-12 rounded-full object-cover' src={urlFor(post.author.image).url()} alt="author-image" />
+                <img className='h-12 w-12 rounded-full object-cover mt-auto' src={urlFor(post.author.image).url()} alt="author-image" />
               </div>
             </div>
           </Link>
